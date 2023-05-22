@@ -15,18 +15,15 @@ class Salary_switch
 		System.out.print("근무평가등급을 입력하세요 : ");
 		rating = sc.next();
 
-		if (rating.equals("우수"))
-		{
-			 raise = currentSalary*0.06;
+		switch(rating) {
+		case "우수" :
+			raise = currentSalary*0.06; break;
+		case "보통" : 
+			raise = currentSalary*0.04; break;
+		case "불량" : 
+			raise = currentSalary*0.02; break;
 		}
-		else if (rating.equals("보통"))
-		{
-			 raise = currentSalary*0.04;
-		}
-		else if (rating.equals("불량"))
-		{
-			 raise = currentSalary*0.02;
-		}
+
 			System.out.println("연봉인상액 : " + (int)raise);
 			newSalary = currentSalary + raise;
 			System.out.println("새 연봉인상액 : " + (int)newSalary);
