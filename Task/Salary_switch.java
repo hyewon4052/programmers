@@ -23,7 +23,6 @@ class Salary_switch
 		case "불량" : 
 			raise = currentSalary*0.02; break;
 		}
-
 			System.out.println("연봉인상액 : " + (int)raise);
 			newSalary = currentSalary + raise;
 			System.out.println("새 연봉인상액 : " + (int)newSalary);
