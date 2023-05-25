@@ -6,7 +6,8 @@ class Salary_switch
 	{
 		Scanner sc = new Scanner(System.in);
 
-		String rating;
+		String rating; 
+
 		double raise = 0.0;
 		double currentSalary, newSalary;
 		
