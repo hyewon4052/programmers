@@ -9,14 +9,8 @@ class Absolute_Test
 		int a, absolute;
 		System.out.print("정수 입력 : ");
 		a = sc.nextInt();
-		if ( a > 0)
-		{
-			absolute = a;
-		}
-		else 
-		{
-			absolute = a*(-1);
-		}
+
+		absolute = a > 0 ? a : a*(-1);
 		System.out.print(a + "의 절대값은 " + absolute +"입니다.");
 	}
 }
