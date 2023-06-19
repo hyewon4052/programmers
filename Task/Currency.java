@@ -23,11 +23,11 @@ class Currency
 		System.out.println("만원권 " + m10000 + "매");
 		System.out.println("오천원권 " + m5000 + "매");
 		System.out.println("천원권 " + m1000 + "매");
-		System.out.println("오백원 " + m500 + "매");
-		System.out.println("백원 " + m100 + "매");
-		System.out.println("오십원 " + m50 + "매");
-		System.out.println("십원 " + m10 + "매");
-		System.out.println("오원 " + m5 + "매");
-		System.out.println("일원 " + m1 + "매");
+		System.out.println("오백원 " + m500 + "개");
+		System.out.println("백원 " + m100 + "개");
+		System.out.println("오십원 " + m50 + "개");
+		System.out.println("십원 " + m10 + "개");
+		System.out.println("오원 " + m5 + "개");
+		System.out.println("일원 " + m1 + "개");
 	}
 }
