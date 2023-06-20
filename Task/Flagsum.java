@@ -12,7 +12,7 @@ class Flagsum
 		for (int i = 0 ; i <= n ; i++ )
 		{
 			i = i + 1;
-			if (sw == 0)  //부호변환
+			if (sw == 0)
 			{
 				sum = sum + i;
 				sw = 1;
