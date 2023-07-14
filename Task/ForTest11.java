@@ -6,7 +6,7 @@ class ForTest11
 		{
 			for (int j = 1; j <= 9 ; j++)
 			{
-				System.out.print(i + "X" + j + "=" + i*j + "\t");
+				System.out.printf("%d X %d = %d\t",i,j,i*j );
 			}
 			System.out.println();
 		}
