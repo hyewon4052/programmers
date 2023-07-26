@@ -45,29 +45,29 @@ class FormMinMaxAvg
 				count++;
 			}
 		}
-		int max = 1;
-		int min = 1;
+		int max = 0;
+		int min = 0;
 
 		double [] ClassAverage = new double[ClassCount];
 		for (int i = 0; i < ClassCount; i++)
 		{
-			ClassAverage[i] = (GetScore[i]+GetScore[i+ClassCount])/2;
+			ClassAverage[i] = (GetScore[i]+GetScore[i+ClassCount])/ (double) 2;
 		}
 
-		for (int i = 1; i < ClassCount; i++)
+		for (int i = 0; i < ClassCount; i++)
 		{
-			if (ClassAverage[i-1] >= ClassAverage[i])
+			if (ClassAverage[i] >= ClassAverage[max])
 			{
 				max = i;
 			}
-			if (ClassAverage[i-1] <= ClassAverage[i])
+			if (ClassAverage[i] <= ClassAverage[min])
 			{
 				min = i;
 			}
 		}
 		
 		System.out.println();
-		System.out.printf("[ 제일 잘한 반은 %d반이며, %d반의 평균 점수는 %.2f점으로, 제일 점수가 낮은 %d반의 평균인 %.2f보다 %.2f점 높습니다.", max, max, ClassAverage[max-1], min, ClassAverage[min-1], ClassAverage[max-1]-ClassAverage[min-1]);
+		System.out.printf("[ 제일 잘한 반은 %d반이며, %d반의 평균 점수는 %.2f점으로, 제일 점수가 낮은 %d반의 평균인 %.2f보다 %.2f점 높습니다.", max+1, max+1, ClassAverage[max], min+1, ClassAverage[min], ClassAverage[max]-ClassAverage[min]);
 
 	}
 }
