@@ -56,11 +56,11 @@ class FormMinMaxAvg
 
 		for (int i = 0; i < ClassCount; i++)
 		{
-			if (ClassAverage[i] >= ClassAverage[max])
+			if (ClassAverage[i] > ClassAverage[max])
 			{
 				max = i;
 			}
-			if (ClassAverage[i] <= ClassAverage[min])
+			else if (ClassAverage[i] <= ClassAverage[min])
 			{
 				min = i;
 			}
