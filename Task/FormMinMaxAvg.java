@@ -29,7 +29,7 @@ class FormMinMaxAvg
 		int[] GetScore = new int[ClassCount*2];
 		for (int i = 1; i <= 2 ; i++ )
 		{
-			for (int j = 1 ; j <= 3 ; j++ )
+			for (int j = 1 ; j <= ClassCount ; j++ )
 			{
 				System.out.print("[" + count + "] " + j + "반 학생 점수 입력 (0~100) ==> ");
 				int score = sc.nextInt();
