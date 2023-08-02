@@ -63,6 +63,7 @@ class ForAvgRank
 					System.out.println("[ 잘못된 범위의 점수가 입력되었습니다. 다시 입력해주세요. ]");
 					System.out.print("[" + count + "] " + j + "반 학생 점수 입력 (0~100) ==> ");
 					score = sc.nextInt();
+					GetScore[count-1] = score;
 				}
 				count++;
 			}
@@ -71,11 +72,17 @@ class ForAvgRank
 		int min = 0;
 		int [] Rank = new int [ClassCount];
 		double [] ClassAverage = new double[ClassCount];
-
-		for (int i = 0; i < ClassCount; i++)
-		{
-			ClassAverage[i] = (GetScore[i]+GetScore[i+ClassCount])/ (double) 2;
+		
+		for (int i = 0; i < ClassCount; i++) 
+		{ 
+			double sum = 0;
+			for (int j = 0; j < StudentCount; j++) 
+			{
+				sum += GetScore[i + j * StudentCount ];
+			}
+			ClassAverage[i] = sum / (double) StudentCount;
 		}
+
 	
 		for (int i = 0; i < ClassCount; i++)
 		{
