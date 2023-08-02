@@ -82,7 +82,6 @@ class ForAvgRank
 			}
 			ClassAverage[i] = sum / (double) StudentCount;
 		}
-
 	
 		for (int i = 0; i < ClassCount; i++)
 		{
