@@ -34,9 +34,9 @@ class ForAvgRank
 			do
 			{
 				System.out.println();
-			System.out.println("[ 입력 가능한 학생 수는 2~4반입니다. 다시 입력해주세요. ]");
-			System.out.print("입력받을 학생 수 (2~4) ==> ");
-			StudentCount = sc.nextInt();
+				System.out.println("[ 입력 가능한 학생 수는 2~4반입니다. 다시 입력해주세요. ]");
+				System.out.print("입력받을 학생 수 (2~4) ==> ");
+				StudentCount = sc.nextInt();
 			}
 			while (StudentCount < 2 || StudentCount > 4);
 		}
@@ -45,44 +45,64 @@ class ForAvgRank
 		System.out.println("[ 총 "+ ClassCount + "개의 반이 존재합니다. ]");
 		System.out.println("[ 각 학급별 학생 수는 "+ StudentCount + "명 입니다. ]");
 		System.out.println();
-		
-		
+				
 		int count = 1;
 		int[] GetScore = new int[ClassCount*StudentCount];
-		for (int i = 1; i <= StudentCount ; i++ )
+		
+		for (int i = 0; i < StudentCount*ClassCount ; i++)
 		{
-			for (int j = 1 ; j <= ClassCount ; j++ )
+			System.out.print("[" + count + "] " + (i % ClassCount +1) + "반 학생 점수 입력 (0~100) ==> ");
+			int score = sc.nextInt();
+			GetScore[count-1] = score;
+
+			if (score < 0 || score > 100)
 			{
-				System.out.print("[" + count + "] " + j + "반 학생 점수 입력 (0~100) ==> ");
-				int score = sc.nextInt();
-				GetScore[count-1] = score;
-				
-				while (score < 0 || score > 100)
+				do
 				{
 					System.out.println();
 					System.out.println("[ 잘못된 범위의 점수가 입력되었습니다. 다시 입력해주세요. ]");
-					System.out.print("[" + count + "] " + j + "반 학생 점수 입력 (0~100) ==> ");
+					System.out.print("[" + count + "] " + (i % ClassCount +1)+ "반 학생 점수 입력 (0~100) ==> ");
 					score = sc.nextInt();
 					GetScore[count-1] = score;
 				}
-				count++;
+				while (score < 0 || score > 100);
 			}
+			count++;
 		}
+		
+//		for (int i = 0; i < StudentCount*ClassCount ; i++ )
+//		{		
+//				System.out.print("[" + count + "] " + (i % ClassCount +1) + "반 학생 점수 입력 (0~100) ==> ");
+//				int score = sc.nextInt();
+//				GetScore[count-1] = score;
+//				
+//				while (score < 0 || score > 100)
+//				{
+//					System.out.println();
+//					System.out.println("[ 잘못된 범위의 점수가 입력되었습니다. 다시 입력해주세요. ]");
+//					System.out.print("[" + count + "] " + (i % ClassCount +1)+ "반 학생 점수 입력 (0~100) ==> ");
+//					score = sc.nextInt();
+//					GetScore[count-1] = score;
+//				}
+//				count++;
+//		}
+
 		int max = 0;
 		int min = 0;
 		int [] Rank = new int [ClassCount];
+		int [] Sum = new int [ClassCount];
 		double [] ClassAverage = new double[ClassCount];
 		
-		for (int i = 0; i < ClassCount; i++) 
-		{ 
-			double sum = 0;
-			for (int j = 0; j < StudentCount; j++) 
-			{
-				sum += GetScore[i + j * StudentCount ];
-			}
-			ClassAverage[i] = sum / (double) StudentCount;
+		double sum = 0;
+		for (int i = 0; i < StudentCount * ClassCount ; i++ )
+		{
+			Sum[i % ClassCount] += GetScore[i];
 		}
-	
+		for (int i = 0; i < ClassCount; i++)
+		{
+			ClassAverage[i] = Sum[i] / (double)StudentCount;
+		}
+
 		for (int i = 0; i < ClassCount; i++)
 		{
 			if (ClassAverage[i] > ClassAverage[max])
