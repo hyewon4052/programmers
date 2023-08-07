@@ -69,23 +69,6 @@ class ForAvgRank
 			}
 			count++;
 		}
-		
-//		for (int i = 0; i < StudentCount*ClassCount ; i++ )
-//		{		
-//				System.out.print("[" + count + "] " + (i % ClassCount +1) + "반 학생 점수 입력 (0~100) ==> ");
-//				int score = sc.nextInt();
-//				GetScore[count-1] = score;
-//				
-//				while (score < 0 || score > 100)
-//				{
-//					System.out.println();
-//					System.out.println("[ 잘못된 범위의 점수가 입력되었습니다. 다시 입력해주세요. ]");
-//					System.out.print("[" + count + "] " + (i % ClassCount +1)+ "반 학생 점수 입력 (0~100) ==> ");
-//					score = sc.nextInt();
-//					GetScore[count-1] = score;
-//				}
-//				count++;
-//		}
 
 		int max = 0;
 		int min = 0;
