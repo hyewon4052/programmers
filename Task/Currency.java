@@ -8,7 +8,7 @@ class Currency
 		
 		System.out.print("금액을 입력하시오 >> ");
 		int m = sc.nextInt();
-		int m50000 = m / 50000;
+		int  m50000 = m / 50000;
 		int m10000 = (m % 50000)  / 10000;
 		int m5000 = ((m % 50000) % 10000) / 5000;
 		int m1000 = (((m % 50000) % 10000) % 5000) / 1000;
