@@ -7,7 +7,7 @@ class Fact_method
 		int f=1;
 
 		System.out.print("n을 입력하시오 : ");
-		int n = sc.nextInt();
+		int n = sc.nextInt( );
 		for (int i = 1 ; i <= n ; i++)
 		{
 			f = f * i;
