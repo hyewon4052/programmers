@@ -5,7 +5,7 @@ class Str
 	public static void main(String[] args) 
 	{
 		Scanner sc = new Scanner(System.in);
-		String st1 = " ";
+		String st1 = "  ";
 		String st2 = " ";
 
 		System.out.print("문자를 입력하세요. : ");
