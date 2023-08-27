@@ -6,7 +6,7 @@ class Flagsum
 		Scanner sc = new Scanner(System.in);
 		int sw=0, sum=0;
 
-		System.out.print("n을 입력하세요 : ");
+		System.out.print("n을 입력하세요  : ");
 		int n = sc.nextInt();
 
 		for (int i = 0 ; i <= n ; i++ )
