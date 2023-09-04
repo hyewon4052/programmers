@@ -9,7 +9,7 @@ class ArrayTest
 		int[]num = new int[3];
 		for (int i = 0 ; i < num.length ; i++)
 		{
-			System.out.print("수를 입력하시오 : ");
+			System.out.print("수를 입력하시오  : ");
 			int n = sc.nextInt();
 			num[i] = n;
 		}
