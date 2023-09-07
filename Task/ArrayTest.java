@@ -7,7 +7,7 @@ class ArrayTest
 		Scanner sc = new Scanner(System.in) ;
 
 		int[]num = new int[3];
-		for (int i = 0 ; i < num.length ; i++)
+		for (int i = 0 ; i < num.length; i++)
 		{
 			System.out.print("수를 입력하시오  : ");
 			int n = sc.nextInt();
