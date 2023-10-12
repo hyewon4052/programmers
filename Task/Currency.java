@@ -6,7 +6,7 @@ class Currency
 	{
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("금액을 입력하시오  >> ");
+		System.out.print("금액을 입력하시오 >> ");
 		int m = sc.nextInt();
 		int  m50000 = m / 50000;
 		int m10000 = (m % 50000)  / 10000;
