@@ -1,6 +1,7 @@
 function solution(left, right) {
-    var answer = 0,count = 0;
+    var answer = 0;
     for (var i = left; i <= right; i++) {
+        let count = 0;
         for (var j = 1; j <= i; j++) {
             if (i % j == 0) {
                 count++;
@@ -10,7 +11,6 @@ function solution(left, right) {
             answer += i;
         else 
             answer -= i;
-        count = 0;
     }
     return answer;
 }
