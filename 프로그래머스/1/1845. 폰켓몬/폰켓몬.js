@@ -7,7 +7,5 @@ function solution(nums) {
     for ( let i = 0; i < nums.length; i++) {
         map.set(nums[i], map.get(nums[i]) ? map.get(nums[i])+1 : 1);
     }
-    answer = map.size < cnt ? map.size : cnt ;
-    
-    return answer;
+    return map.size < cnt ? map.size : cnt ;
 }
